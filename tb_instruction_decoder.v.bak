@@ -1,0 +1,138 @@
+`timescale 1ns/1ps
+module instruction_decoder_tb;
+
+  reg  [31:0] r_instr;
+
+  wire [ 6:0] w_opcode;
+  wire [ 2:0] w_funct3;
+  wire [ 6:0] w_funct7;
+  wire [ 4:0] w_rs1, w_rs2, w_rd;
+  wire [31:0] w_instr;
+
+  instruction_decoder dut
+  (
+    .i_instr  (r_instr),
+    .o_opcode (w_opcode),
+    .o_funct3 (w_funct3),
+    .o_funct7 (w_funct7),
+    .o_rs1    (w_rs1),
+    .o_rs2    (w_rs2),
+    .o_rd     (w_rd),
+    .o_instr  (w_instr)
+  );
+
+  // ── Opcode constants (for readability) ───────────────────────
+  localparam OP_R      = 7'b0110011;
+  localparam OP_I_ALU  = 7'b0010011;
+  localparam OP_LOAD   = 7'b0000011;
+  localparam OP_STORE  = 7'b0100011;
+  localparam OP_BRANCH = 7'b1100011;
+  localparam OP_JAL    = 7'b1101111;
+  localparam OP_LUI    = 7'b0110111;
+
+  // ── Helper task ───────────────────────────────────────────────
+  integer pass_count, fail_count;
+
+  task check;
+    input [127:0] name;
+    input [6:0]   exp_opcode;
+    input [2:0]   exp_funct3;
+    input [6:0]   exp_funct7;
+    input [4:0]   exp_rs1, exp_rs2, exp_rd;
+    begin
+      #1; // let combinational outputs settle
+      $display("──────────────────────────────────────────────────");
+      $display("TEST : %s", name);
+      $display("  instr  = 0x%h", r_instr);
+      $display("  opcode = 7'b%b  (expect 7'b%b)", w_opcode, exp_opcode);
+      $display("  funct3 = 3'b%b  (expect 3'b%b)", w_funct3, exp_funct3);
+      $display("  funct7 = 7'b%b  (expect 7'b%b)", w_funct7, exp_funct7);
+      $display("  rs1=%0d rs2=%0d rd=%0d  (expect rs1=%0d rs2=%0d rd=%0d)",
+               w_rs1, w_rs2, w_rd, exp_rs1, exp_rs2, exp_rd);
+      $display("  o_instr passthrough match = %b", (w_instr === r_instr));
+
+      if (w_opcode === exp_opcode &&
+          w_funct3 === exp_funct3 &&
+          w_funct7 === exp_funct7 &&
+          w_rs1    === exp_rs1    &&
+          w_rs2    === exp_rs2    &&
+          w_rd     === exp_rd     &&
+          w_instr  === r_instr)
+      begin
+        $display("  >>> PASS <<<");
+        pass_count = pass_count + 1;
+      end
+      else
+      begin
+        $display("  *** FAIL ***");
+        fail_count = fail_count + 1;
+      end
+    end
+  endtask
+
+  // ── Stimulus ─────────────────────────────────────────────────
+  initial
+  begin
+    pass_count = 0;
+    fail_count = 0;
+
+    // 1. R-TYPE: ADD x3, x1, x2
+    //    funct7=0000000 rs2=00010 rs1=00001 funct3=000 rd=00011 opcode=0110011
+    r_instr = 32'b0000000_00010_00001_000_00011_0110011;
+    check("R-TYPE: ADD x3,x1,x2",
+          OP_R, 3'b000, 7'b0000000, 5'd1, 5'd2, 5'd3);
+
+    // 2. R-TYPE: SUB x5, x3, x4
+    //    funct7=0100000 distinguishes SUB from ADD
+    r_instr = 32'b0100000_00100_00011_000_00101_0110011;
+    check("R-TYPE: SUB x5,x3,x4",
+          OP_R, 3'b000, 7'b0100000, 5'd3, 5'd4, 5'd5);
+
+    // 3. I-TYPE: ADDI x2, x1, 5
+    //    imm occupies [31:20] — decoder doesn't interpret it, just passes bits
+    r_instr = 32'b000000000101_00001_000_00010_0010011;
+    check("I-TYPE: ADDI x2,x1,5",
+          OP_I_ALU, 3'b000, 7'b0000000, 5'd1, 5'd0, 5'd2);
+    //    rs2 field [24:20] = 00000 for I-type (not a real register, but bits exist)
+
+    // 4. LOAD: LW x6, 8(x1)
+    //    funct3=010 = word width, tells MEM stage to do 32-bit load
+    r_instr = 32'b000000001000_00001_010_00110_0000011;
+    check("LOAD: LW x6,8(x1)",
+          OP_LOAD, 3'b010, 7'b0000000, 5'd1, 5'd0, 5'd6);
+
+    // 5. STORE: SW x2, 12(x1)
+    //    funct3=010 = word, imm split across [31:25] and [11:7]
+    r_instr = 32'b0000000_00010_00001_010_01100_0100011;
+    check("STORE: SW x2,12(x1)",
+          OP_STORE, 3'b010, 7'b0000000, 5'd1, 5'd2, 5'd0);
+    //    rd field [11:7] = imm[4:0] for S-type — control unit ignores rd for stores
+
+    // 6. BRANCH: BEQ x1, x2, 16
+    //    funct3=000 = BEQ; imm bits scattered, but decoder doesn't touch them
+    r_instr = 32'b0_000001_00010_00001_000_0000_0_1100011;
+    check("BRANCH: BEQ x1,x2,16",
+          OP_BRANCH, 3'b000, 7'b0000001, 5'd1, 5'd2, 5'd0);
+
+    // 7. JAL x1, 256
+    //    No rs1/rs2 in J-type — those bit positions hold imm pieces
+    r_instr = 32'b0_0000001000_0_00000000_00001_1101111;
+    check("JAL x1,256",
+          OP_JAL, 3'b000, 7'b0000001, 5'd0, 5'd0, 5'd1);
+
+    // 8. LUI x7, 0xABCDE
+    //    Only rd and imm[31:12] matter — funct3/funct7 positions hold imm bits
+    r_instr = 32'b10101011110011011110_00111_0110111;
+    check("LUI x7,0xABCDE",
+          OP_LUI, 3'b110, 7'b1010101, 5'd0, 5'd0, 5'd7);
+    //    funct3/funct7 will read garbage (they're imm bits) — that's fine,
+    //    the control unit only uses them for R/I types where they're valid.
+
+    // ── Summary ──────────────────────────────────────────────────
+    $display("══════════════════════════════════════════════════");
+    $display("Results: %0d PASSED  /  %0d FAILED", pass_count, fail_count);
+    $display("══════════════════════════════════════════════════");
+    $finish;
+  end
+
+endmodule

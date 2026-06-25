@@ -1,0 +1,658 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vALU
+Z0 !s110 1782386712
+!i10b 1
+!s100 DSlcMBRm5QIZ5UR@Z>lzP0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ITVRS:CPlU<Gz=Mba6F]^X3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/msim
+w1782381808
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/ALU.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/ALU.v
+!i122 208
+L0 2 31
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1782386712.000000
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/ALU.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@a@l@u
+vALU_tb
+Z8 !s110 1782386714
+!i10b 1
+!s100 H?^:ShTicYjQ4i;Z87IXU0
+R1
+IZfQ29hT7hi[>UO7c1QB<X2
+R2
+R3
+w1781777694
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_ALU.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_ALU.v
+!i122 223
+L0 2 43
+R4
+r1
+!s85 0
+31
+Z9 !s108 1782386714.000000
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_ALU.v|
+!i113 1
+R6
+R7
+n@a@l@u_tb
+vBranch
+!s110 1782386170
+!i10b 1
+!s100 FZU>5NgLdI3=aaY^hSb8R1
+R1
+Ic>iaiSdan;i7oU=j[@eA]0
+R2
+R3
+w1782386159
+Z10 8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/branch.v
+Z11 FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/branch.v
+!i122 188
+Z12 L0 12 30
+R4
+r1
+!s85 0
+31
+!s108 1782386170.000000
+Z13 !s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/branch.v|
+Z14 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/branch.v|
+!i113 1
+R6
+R7
+n@branch
+vbranch
+R8
+!i10b 1
+!s100 3[aT:VPYCeJ^P[RWVB?`U2
+R1
+I4X0FbKNDHSl=<Oj=]EP[X3
+R2
+R3
+w1782386435
+R10
+R11
+!i122 225
+R12
+R4
+r1
+!s85 0
+31
+R9
+R13
+R14
+!i113 1
+R6
+R7
+vbranch_comparator
+!s110 1782386077
+!i10b 1
+!s100 P;7[e9GzGL0a6K^Aa_Q5^2
+R1
+IAEO5Q[MB=G?;Bj>D^az3T2
+R2
+R3
+w1782385805
+R10
+R11
+!i122 186
+R12
+R4
+r1
+!s85 0
+31
+!s108 1782386077.000000
+R13
+R14
+!i113 1
+R6
+R7
+vcontrol_unit
+Z15 !s110 1782386076
+!i10b 1
+!s100 jjj]fM4O;MbUYB@f>>LBf2
+R1
+IAZ?MBa:Mm52e<?nl=z=8;1
+R2
+R3
+w1782289695
+Z16 8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/ctrl_unit.v
+Z17 FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/ctrl_unit.v
+!i122 175
+Z18 L0 16 193
+R4
+r1
+!s85 0
+31
+Z19 !s108 1782386076.000000
+Z20 !s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/ctrl_unit.v|
+Z21 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/ctrl_unit.v|
+!i113 1
+R6
+R7
+vctrl_unit
+Z22 !s110 1782386713
+!i10b 1
+!s100 THSP]H=6jKS^FWj`PJ8kF0
+R1
+ILTE18C3HfC_U0]O^jCN9W0
+R2
+R3
+w1782386354
+R16
+R17
+!i122 214
+R18
+R4
+r1
+!s85 0
+31
+Z23 !s108 1782386713.000000
+R20
+R21
+!i113 1
+R6
+R7
+vdatamemory
+R22
+!i10b 1
+!s100 j[Vd]RgC`70]U4b>z65N_3
+R1
+IKNP0Hfc>aiLX3^oCIhifi1
+R2
+R3
+w1782304006
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/datamemory.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/datamemory.v
+!i122 215
+L0 9 85
+R4
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/datamemory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/datamemory.v|
+!i113 1
+R6
+R7
+vimm_gen
+!s110 1782116410
+!i10b 1
+!s100 JAe_WzW;OGJe_[I?QZnic2
+R1
+I[n?373S:AZo;6WTiESYEX3
+R2
+R3
+w1782115998
+Z24 8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/immediate_gen.v
+Z25 FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/immediate_gen.v
+!i122 97
+Z26 L0 18 49
+R4
+r1
+!s85 0
+31
+!s108 1782116410.000000
+Z27 !s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/immediate_gen.v|
+Z28 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/immediate_gen.v|
+!i113 1
+R6
+R7
+vimmediate_gen
+R0
+!i10b 1
+!s100 2djS6;B8?a3S>_=OMiDO81
+R1
+Im7PiCaSmaDJU9O;O?nnJ?2
+R2
+R3
+w1782116478
+R24
+R25
+!i122 212
+R26
+R4
+r1
+!s85 0
+31
+R5
+R27
+R28
+!i113 1
+R6
+R7
+vimmediate_gen_tb
+R22
+!i10b 1
+!s100 LV[JLS:GMTfIaoYP;gY:72
+R1
+I^Y[_:k=WYlKHP>7R3?LHA3
+R2
+R3
+w1782116364
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_immediate_gen.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_immediate_gen.v
+!i122 218
+L0 5 138
+R4
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_immediate_gen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_immediate_gen.v|
+!i113 1
+R6
+R7
+vinstruction_decoder
+R0
+!i10b 1
+!s100 ehL>CB0fgaJO6C48Z:AAf3
+R1
+I>n>2bfnQanmjO2V__DR@f1
+R2
+R3
+w1781849905
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_decoder.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_decoder.v
+!i122 211
+L0 1 29
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_decoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_decoder.v|
+!i113 1
+R6
+R7
+vinstruction_decoder2_tb
+R22
+!i10b 1
+!s100 ZXjcBKS=S1;=:]CZeBnHV0
+R1
+Ij;6eiJBX5YS;nld0@Bb=X1
+R2
+R3
+w1781855438
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_decoder2.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_decoder2.v
+!i122 219
+L0 3 91
+R4
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_decoder2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_decoder2.v|
+!i113 1
+R6
+R7
+vinstruction_decoder_tb
+!s110 1782314482
+!i10b 1
+!s100 nmnl@FX;I`a_RQzZ7A@TV1
+R1
+IIR:60cdj4J3LUUZ;YKzAV0
+R2
+R3
+w1781853466
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_decoder.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_decoder.v
+!i122 126
+L0 2 137
+R4
+r1
+!s85 0
+31
+!s108 1782314482.000000
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_decoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_decoder.v|
+!i113 1
+R6
+R7
+vinstruction_memory
+R22
+!i10b 1
+!s100 Ih5DNU75_zBf7cCg?9_;;3
+R1
+IB9b1]gZ4nz<5I2<:W<>4C2
+R2
+R3
+w1782113263
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_memory.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_memory.v
+!i122 213
+L0 1 23
+R4
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_memory.v|
+!i113 1
+R6
+R7
+vinstruction_memory_tb
+R22
+!i10b 1
+!s100 OaJHfAWVOTAdSYbnOo5@P0
+R1
+I_@C44C5aQZaRegbn=Qb5z3
+R2
+R3
+w1782115295
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_memory.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_memory.v
+!i122 220
+L0 3 78
+R4
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_instruction_memory.v|
+!i113 1
+R6
+R7
+vpc
+R0
+!i10b 1
+!s100 if8aN^268KzQoJCHbY?MD3
+R1
+I3GYMl7PIE0a1cm2;l`bF90
+R2
+R3
+w1781777607
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/pc.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/pc.v
+!i122 210
+L0 1 21
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/pc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/pc.v|
+!i113 1
+R6
+R7
+vpc_tb
+R8
+!i10b 1
+!s100 HebzTWlZOZOFH6PjO>7h43
+R1
+I=eCPEOlGkB>cNjf`AG9LK1
+R2
+R3
+w1781806093
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_pc.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_pc.v
+!i122 221
+L0 3 63
+R4
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_pc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_pc.v|
+!i113 1
+R6
+R7
+vreg_file
+R0
+!i10b 1
+!s100 c74[A3Y@zXVk>zgG@zjGh3
+R1
+IA>S_NP12Oh9`ecg0;L@QB2
+R2
+R3
+w1781778185
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/reg_file.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/reg_file.v
+!i122 209
+L0 1 27
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/reg_file.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/reg_file.v|
+!i113 1
+R6
+R7
+vreg_filetb
+R8
+!i10b 1
+!s100 TRb@WnR>iIW@ij?kIFEKb0
+R1
+I_]Wj>8DON0k09n<8hOAal2
+R2
+R3
+w1781778265
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_reg_file2.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_reg_file2.v
+!i122 222
+L0 2 87
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_reg_file2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_reg_file2.v|
+!i113 1
+R6
+R7
+vsingle_cycle
+!s110 1782409361
+!i10b 1
+!s100 ONY5NHoB3hb]V?VP=_Ge82
+R1
+IaWdC]colP8;@g_lQU^S:a3
+R2
+R3
+w1782409348
+Z29 8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/single_cycle.v
+Z30 FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/single_cycle.v
+!i122 228
+L0 16 174
+R4
+r1
+!s85 0
+31
+!s108 1782409361.000000
+Z31 !s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/single_cycle.v|
+Z32 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/single_cycle.v|
+!i113 1
+R6
+R7
+vsingle_cycle_cpu
+!s110 1782385464
+!i10b 1
+!s100 jYfUCK7^_B><m7V4YOmgQ3
+R1
+Ie;F6f9lGZiDMHS6`Dh>;o2
+R2
+R3
+w1782385385
+R29
+R30
+!i122 149
+L0 16 156
+R4
+r1
+!s85 0
+31
+!s108 1782385464.000000
+R31
+R32
+!i113 1
+R6
+R7
+vtb_control_unit
+R15
+!i10b 1
+!s100 e3z6:6@kAN1W48XAVF4Ad2
+R1
+Iz4[2Yee?93Ddl1N3`HYX82
+R2
+R3
+w1782313123
+Z33 8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_ctrl_unit.v
+Z34 FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_ctrl_unit.v
+!i122 177
+Z35 L0 3 169
+R4
+r1
+!s85 0
+31
+R19
+Z36 !s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_ctrl_unit.v|
+Z37 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_ctrl_unit.v|
+!i113 1
+R6
+R7
+vtb_ctrl_unit
+R22
+!i10b 1
+!s100 ^Lg_W@gON0GD[7kBN`5Ri2
+R1
+IgD;oK6M7?UPl3QZ`X]HmQ2
+R2
+R3
+w1782386380
+R33
+R34
+!i122 216
+R35
+R4
+r1
+!s85 0
+31
+R23
+R36
+R37
+!i113 1
+R6
+R7
+vtb_data_memory
+!s110 1782304299
+!i10b 1
+!s100 d[<:nj]9@8g5lE:RE5<5=3
+R1
+IYMQYjLhWjnZkWc01k_4X:1
+R2
+R3
+w1782117525
+Z38 8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_datamemory.v
+Z39 FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_datamemory.v
+!i122 104
+L0 6 132
+R4
+r1
+!s85 0
+31
+!s108 1782304299.000000
+Z40 !s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_datamemory.v|
+Z41 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_datamemory.v|
+!i113 1
+R6
+R7
+vtb_datamemory
+R22
+!i10b 1
+!s100 9FL1`i4Gk8Y]f=zI6Yfmj1
+R1
+I`BzdEIB:2ZF`aU3dBnBOS1
+R2
+R3
+w1782324748
+R38
+R39
+!i122 217
+L0 2 132
+R4
+r1
+!s85 0
+31
+R23
+R40
+R41
+!i113 1
+R6
+R7
+vtb_instruction_memory
+!s110 1782110329
+!i10b 1
+!s100 oRGFSzSG8dl10BMgID7bg1
+R1
+I8f?_9EN;n5LGHiOSGmImP0
+R2
+R3
+w1781971657
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_memory_tb.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_memory_tb.v
+!i122 60
+L0 3 82
+R4
+r1
+!s85 0
+31
+!s108 1782110329.000000
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_memory_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/instruction_memory_tb.v|
+!i113 1
+R6
+R7
+vtb_single_cycle
+R8
+!i10b 1
+!s100 =Kz3bjII@?CNzMXToBGdi1
+R1
+I35>UI;Uh9bdT`DJFojhb]3
+R2
+R3
+w1782385839
+8C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_single_cycle.v
+FC:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_single_cycle.v
+!i122 226
+L0 24 111
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_single_cycle.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kmsiv/OneDrive/Documents/preps/risc v 5 pipeline/implementation/tb_single_cycle.v|
+!i113 1
+R6
+R7
